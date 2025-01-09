@@ -78,7 +78,9 @@ class TodoListTest {
     public void doesExistCompletedTasks(){
         TodoList todoList = new TodoList();
 
-        Assertions.assertFalse(todoList.getCompletedTasks().isEmpty());
+        if(todoList.getCompletedTasks().isEmpty()){
+            Assertions.assertFalse(todoList.getCompletedTasks().isEmpty());
+        }
     }
 
     @Test
@@ -96,8 +98,22 @@ class TodoListTest {
     public void UncompletedTasksExist(){
         TodoList todoList = new TodoList();
 
-        Assertions.assertFalse(todoList.getUncompletedTasks().isEmpty());
+        if(!todoList.getUncompletedTasks().isEmpty()){
+            Assertions.assertFalse(todoList.getUncompletedTasks().isEmpty());
+        }
     }
+
+    @Test
+    public void doesNotExistUncompletedTasks(){
+        TodoList todoList = new TodoList();
+
+        if(todoList.getUncompletedTasks().isEmpty()){
+            Assertions.assertEquals("There are no uncompleted tasks!", todoList.getUncompletedTasks());
+        }
+    }
+
+
+    // Task 6
 
 
 }

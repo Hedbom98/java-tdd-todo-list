@@ -61,6 +61,15 @@ public class TodoList {
 
     // Task 5
     public String getUncompletedTasks(){
-        return "abc";
+        String uncompletedTasks = "";
+        for(String task : this.tasks.keySet()){
+            if(this.tasks.get(task).equals(false)){
+                uncompletedTasks += task + ", ";
+            }
+        }
+        if(!uncompletedTasks.equals("")){
+            return uncompletedTasks;
+        }
+        return "There are no uncompleted tasks!";
     }
 }
