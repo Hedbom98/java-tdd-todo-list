@@ -161,5 +161,14 @@ class TodoListTest {
     }
 
 
+    // Test 9
+    @Test
+    public void tasksAreAscending(){
+        TodoList todoList = new TodoList();
+
+        Assertions.assertEquals(todoList.taskDescending(), "Buy groceries, Clean room, Write CV");
+    }
+
+
 
 }
