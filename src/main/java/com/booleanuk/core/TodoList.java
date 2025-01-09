@@ -14,10 +14,14 @@ public class TodoList {
         }};
     }
 
+
+    // Task 1
     public boolean add(String taskName){
         return !this.tasks.containsKey(taskName);
     }
 
+
+    // Task 2
     public String listTasks(){
         if(this.tasks.isEmpty()){
             return "The todolist does not contain any tasks!";
@@ -29,4 +33,9 @@ public class TodoList {
         return listOfTasks;
     }
 
+
+    // Task 3
+    public boolean updateTaskStatus(String task, Boolean status){
+        return true;
+    }
 }
