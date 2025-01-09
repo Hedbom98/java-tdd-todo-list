@@ -76,6 +76,9 @@ public class TodoList {
 
     // Task 6
     public String SearchTask(String task){
-        return "The task exist!";
+        if(this.tasks.containsKey(task)){
+            return "The task exist!";
+        }
+        return "The task does not exist!";
     }
 }
