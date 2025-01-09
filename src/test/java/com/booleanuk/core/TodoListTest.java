@@ -13,6 +13,7 @@ class TodoListTest {
         Assertions.assertNotEquals("Goodbye", hello);
     }
 
+    //Task 1
     @Test
     public void addTaskThatDoesNotExist(){
         TodoList todoList = new TodoList();
@@ -28,4 +29,16 @@ class TodoListTest {
 
         Assertions.assertFalse(todoList.add(taskName));
     }
+
+
+
+    //Task 2
+    @Test
+    public void tasksExistInTodoList(){
+        TodoList todoList = new TodoList();
+
+        Assertions.assertTrue(todoList.listTasks());
+    }
+
+
 }
