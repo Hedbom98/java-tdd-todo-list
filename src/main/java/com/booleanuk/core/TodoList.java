@@ -72,4 +72,10 @@ public class TodoList {
         }
         return "There are no uncompleted tasks!";
     }
+
+
+    // Task 6
+    public String SearchTask(String task){
+        return "The task exist!";
+    }
 }
