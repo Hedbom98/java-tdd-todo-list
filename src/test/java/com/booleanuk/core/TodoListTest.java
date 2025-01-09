@@ -157,7 +157,7 @@ class TodoListTest {
     public void tasksAreDescending(){
         TodoList todoList = new TodoList();
 
-        Assertions.assertEquals(todoList.taskDescending(), "Buy groceries, Clean room, Write CV");
+        Assertions.assertEquals(todoList.taskDescending(), "Write CV, Clean room, Buy groceries");
     }
 
 

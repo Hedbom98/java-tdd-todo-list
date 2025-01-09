@@ -101,6 +101,27 @@ public class TodoList {
 
     // Task 8
     public String taskDescending(){
-        return "Buy groceries, Clean room, Write CV";
+        if(this.tasks.isEmpty()){
+            return "The todolist does not contain any tasks!";
+        }
+        else{
+            ArrayList<String> sortedKeys = new ArrayList<>(this.tasks.keySet());
+            Collections.sort(sortedKeys);
+            Collections.reverse(sortedKeys);
+            String tasksDescending = "";
+
+            for(String task : sortedKeys){
+                if(!task.equals(sortedKeys.getLast())){
+                    tasksDescending += task + ", ";
+                }
+                else{
+                    tasksDescending +=  task;
+                }
+            }
+            System.out.println(tasksDescending);
+            return tasksDescending;
+        }
     }
+
+
 }
