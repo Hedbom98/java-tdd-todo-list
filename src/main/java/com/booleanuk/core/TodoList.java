@@ -42,4 +42,10 @@ public class TodoList {
         }
         return false;
     }
+
+
+    // Task 4
+    public String getCompletedTasks(){
+        return "abc";
+    }
 }
