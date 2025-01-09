@@ -15,7 +15,7 @@ public class TodoList {
     }
 
     public boolean add(String taskName){
-        return true;
+        return !this.tasks.containsKey(taskName);
     }
 
 }
