@@ -145,7 +145,7 @@ class TodoListTest {
         TodoList todoList = new TodoList();
         String task = "Play the piano";
 
-        Assertions.assertTrue(todoList.removeTask(task));
+        Assertions.assertFalse(todoList.removeTask(task));
     }
 
 }

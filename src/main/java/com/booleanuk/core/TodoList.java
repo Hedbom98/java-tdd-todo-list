@@ -17,7 +17,11 @@ public class TodoList {
 
     // Task 1
     public boolean add(String taskName){
-        return !this.tasks.containsKey(taskName);
+        if(!this.tasks.containsKey(taskName)){
+            this.tasks.put(taskName, false);
+            return true;
+        }
+        return false;
     }
 
 
@@ -85,6 +89,10 @@ public class TodoList {
 
     // Task 7
     public Boolean removeTask(String task){
-        return true;
+        if(this.tasks.containsKey(task)){
+            this.tasks.remove(task);
+            return true;
+        }
+        return false;
     }
 }
