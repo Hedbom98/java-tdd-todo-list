@@ -81,7 +81,7 @@ class TodoListTest {
     public void doesExistCompletedTasks(){
         TodoList todoList = new TodoList();
 
-        if(todoList.getCompletedTasks().isEmpty()){
+        if(!todoList.getCompletedTasks().isEmpty()){
             Assertions.assertFalse(todoList.getCompletedTasks().isEmpty());
         }
     }
