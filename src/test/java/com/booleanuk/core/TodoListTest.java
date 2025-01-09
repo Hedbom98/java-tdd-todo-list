@@ -60,4 +60,13 @@ class TodoListTest {
     }
 
 
+    // Task 4
+    @Test
+    public void doesItExistCompletedTasks(){
+        TodoList todoList = new TodoList();
+
+        Assertions.assertFalse(todoList.getCompletedTasks().isEmpty());
+    }
+
+
 }
