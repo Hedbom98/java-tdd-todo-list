@@ -42,7 +42,14 @@ class TodoListTest {
 
 
 
-    
+    //Task 3
+    @Test
+    public void doesStatusUpdateIfTaskExist(){
+        TodoList todoList = new TodoList();
+        String task = "Clean room";
+
+        Assertions.assertTrue(todoList.updateTaskStatus(task, true));
+    }
 
 
 }
