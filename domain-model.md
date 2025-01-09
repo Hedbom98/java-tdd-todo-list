@@ -14,7 +14,7 @@
 | getCompletedTasks()                           |                                | There are completed tasks in the todolist                                     | string with all completed tasks    |
 |                                               |                                | There are no completed tasks in the todolist                                  | string with error message          |
 |                                               |                                |                                                                               |                                    |
-| getNotCompletedTasks()                        |                                | There are uncompleted tasks in the todolist                                   | string with all uncompleted tasks  |
+| getUncompletedTasks()                         |                                | There are uncompleted tasks in the todolist                                   | string with all uncompleted tasks  |
 |                                               |                                | There are no uncompleted tasks in the todolist                                | string with error message          |
 |                                               |                                |                                                                               |                                    |
 | SearchTask(String)                            |                                | There was a task with the provided name                                       | string with the task               |

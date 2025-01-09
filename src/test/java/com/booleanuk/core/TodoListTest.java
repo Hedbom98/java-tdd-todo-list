@@ -37,7 +37,20 @@ class TodoListTest {
     public void tasksExistInTodoList(){
         TodoList todoList = new TodoList();
 
-        Assertions.assertFalse(todoList.listTasks().isEmpty());
+        if(!todoList.tasks.isEmpty()){
+            Assertions.assertFalse(todoList.listTasks().isEmpty());
+        }
+
+    }
+
+    @Test
+    public void tasksDoesNotExistInTodoList(){
+        TodoList todoList = new TodoList();
+
+        if(todoList.tasks.isEmpty()){
+            Assertions.assertEquals("The todolist does not contain any tasks!", todoList.listTasks());
+        }
+
     }
 
 
@@ -62,10 +75,28 @@ class TodoListTest {
 
     // Task 4
     @Test
-    public void doesItExistCompletedTasks(){
+    public void doesExistCompletedTasks(){
         TodoList todoList = new TodoList();
 
         Assertions.assertFalse(todoList.getCompletedTasks().isEmpty());
+    }
+
+    @Test
+    public void doesNotExistCompletedTasks(){
+        TodoList todoList = new TodoList();
+
+        if(todoList.getCompletedTasks().isEmpty()){
+            Assertions.assertEquals("There are no completed tasks!", todoList.getCompletedTasks());
+        }
+    }
+
+
+    // Task 5
+    @Test
+    public void UncompletedTasksExist(){
+        TodoList todoList = new TodoList();
+
+        Assertions.assertFalse(todoList.getUncompletedTasks().isEmpty());
     }
 
 

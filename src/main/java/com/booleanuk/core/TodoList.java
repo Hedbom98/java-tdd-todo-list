@@ -46,6 +46,19 @@ public class TodoList {
 
     // Task 4
     public String getCompletedTasks(){
-        return "abc";
+        String completedTasks = "";
+        for(String task : this.tasks.keySet()){
+            if(this.tasks.get(task).equals(true)){
+                completedTasks += task + ", ";
+            }
+        }
+        if(!completedTasks.equals("")){
+            return completedTasks;
+        }
+        return "There are no completed tasks!";
     }
+
+
+    // Task 5
+
 }
