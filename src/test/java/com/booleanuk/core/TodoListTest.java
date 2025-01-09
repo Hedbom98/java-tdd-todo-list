@@ -51,5 +51,13 @@ class TodoListTest {
         Assertions.assertTrue(todoList.updateTaskStatus(task, true));
     }
 
+    @Test
+    public void doesStatusUpdateIfTaskDoesNotExist(){
+        TodoList todoList = new TodoList();
+        String task = "Go do exercise";
+
+        Assertions.assertFalse(todoList.updateTaskStatus(task, true));
+    }
+
 
 }
