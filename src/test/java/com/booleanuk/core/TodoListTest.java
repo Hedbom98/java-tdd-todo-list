@@ -130,4 +130,14 @@ class TodoListTest {
         Assertions.assertEquals("The task does not exist!", todoList.SearchTask(task));
     }
 
+
+    // Task 7
+    @Test
+    public void taskIsRemoved(){
+        TodoList todoList = new TodoList();
+        String task = "Clean room";
+
+        Assertions.assertTrue(todoList.removeTask(task));
+    }
+
 }
