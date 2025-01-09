@@ -14,10 +14,18 @@ class TodoListTest {
     }
 
     @Test
-    public void tryToAddToTodoList(){
+    public void addTaskThatDoesNotExist(){
         TodoList todoList = new TodoList();
         String taskName = "Go do exercise";
 
         Assertions.assertTrue(todoList.add(taskName));
+    }
+
+    @Test
+    public void addTaskThatDoesExist(){
+        TodoList todoList = new TodoList();
+        String taskName = "Clean room";
+
+        Assertions.assertFalse(todoList.add(taskName));
     }
 }
