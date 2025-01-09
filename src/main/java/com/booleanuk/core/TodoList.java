@@ -81,4 +81,10 @@ public class TodoList {
         }
         return "The task does not exist!";
     }
+
+
+    // Task 7
+    public Boolean removeTask(String task){
+        return true;
+    }
 }
