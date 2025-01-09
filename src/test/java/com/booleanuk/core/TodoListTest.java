@@ -114,6 +114,12 @@ class TodoListTest {
 
 
     // Task 6
+    @Test
+    public void taskDoesExist(){
+        TodoList todoList = new TodoList();
+        String task = "Buy groceries";
 
+        Assertions.assertEquals(todoList.SearchTask(task), "The task exist!");
+    }
 
 }
