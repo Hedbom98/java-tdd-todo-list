@@ -19,7 +19,14 @@ public class TodoList {
     }
 
     public String listTasks(){
-        return "abc";
+        if(this.tasks.isEmpty()){
+            return "The todolist does not contain any tasks!";
+        }
+        String listOfTasks = "";
+        for(String task : this.tasks.keySet()){
+            listOfTasks += task + ", ";
+        }
+        return listOfTasks;
     }
 
 }
