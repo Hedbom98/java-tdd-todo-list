@@ -37,7 +37,7 @@ class TodoListTest {
     public void tasksExistInTodoList(){
         TodoList todoList = new TodoList();
 
-        Assertions.assertTrue(todoList.listTasks());
+        Assertions.assertFalse(todoList.listTasks().isEmpty());
     }
 
 
