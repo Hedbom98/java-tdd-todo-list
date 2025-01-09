@@ -1,5 +1,7 @@
 package com.booleanuk.core;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class TodoList {
@@ -94,5 +96,11 @@ public class TodoList {
             return true;
         }
         return false;
+    }
+
+
+    // Task 8
+    public String taskDescending(){
+        return "Buy groceries, Clean room, Write CV";
     }
 }
