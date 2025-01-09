@@ -118,10 +118,30 @@ public class TodoList {
                     tasksDescending +=  task;
                 }
             }
-            System.out.println(tasksDescending);
             return tasksDescending;
         }
     }
 
 
+    // Task 9
+    public String taskAscending(){
+        if(this.tasks.isEmpty()){
+            return "The todolist does not contain any tasks!";
+        }
+        else{
+            ArrayList<String> sortedKeys = new ArrayList<>(this.tasks.keySet());
+            Collections.sort(sortedKeys);
+            String tasksAscending = "";
+
+            for(String task : sortedKeys){
+                if(!task.equals(sortedKeys.getLast())){
+                    tasksAscending += task + ", ";
+                }
+                else{
+                    tasksAscending +=  task;
+                }
+            }
+            return tasksAscending;
+        }
+    }
 }
