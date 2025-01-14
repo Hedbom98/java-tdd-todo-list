@@ -6,14 +6,10 @@ import java.util.HashMap;
 
 public class TodoList {
 
-    HashMap<String, Boolean> tasks = new HashMap<>();
+    HashMap<String, Boolean> tasks;
 
-    public TodoList(){
-        this.tasks = new HashMap<>(){{
-            put("Clean room", false);
-            put("Buy groceries", false);
-            put("Write CV", true);
-        }};
+    public TodoList(HashMap<String, Boolean> tasks){
+        this.tasks = tasks;
     }
 
 
