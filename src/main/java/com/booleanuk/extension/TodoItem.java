@@ -1,14 +1,23 @@
 package com.booleanuk.extension;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class TodoItem {
     private String name;
     private Boolean completed;
-    private Integer todoID;
+    private final Integer todoID;
+    private LocalDateTime dateTime;
 
     public TodoItem(Integer todoID, String name, Boolean completed){
         this.todoID = todoID;
         this.name = name;
         this.completed = false;
+        this.dateTime = LocalDateTime.now();
+    }
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 
     public String getName() {
@@ -29,9 +38,5 @@ public class TodoItem {
 
     public Integer getTodoID() {
         return todoID;
-    }
-
-    public void setTodoID(Integer todoID) {
-        this.todoID = todoID;
     }
 }

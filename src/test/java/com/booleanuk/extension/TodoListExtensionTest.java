@@ -68,4 +68,13 @@ public class TodoListExtensionTest {
 
         Assertions.assertEquals("Task with ID 3 has a new status: completed", todoList.updateStatusByID(nonExistingID, true));
     }
+
+    // EXTENSION 4
+    @Test
+    public void noTasksAreInTheList(){
+        ArrayList<TodoItem> emptyList = new ArrayList<>(){};
+        TodoListExtension todoList = new TodoListExtension(emptyList);
+
+        Assertions.assertEquals("There are no tasks in the list!", todoList.showDateTimeForEachTask());
+    }
 }
