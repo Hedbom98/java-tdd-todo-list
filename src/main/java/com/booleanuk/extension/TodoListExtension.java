@@ -48,6 +48,13 @@ public class TodoListExtension {
     }
 
     public String showDateTimeForEachTask(){
+        String tasks = "";
+        if(!this.tasks.isEmpty()){
+            for(TodoItem item : this.tasks){
+                tasks += "Task with id: " + item.getTodoID() + ", " + item.getName() + " was created: " + item.getDateTime().toString() + "\n";
+            }
+            return tasks;
+        }
         return "There are no tasks in the list!";
     }
 }
