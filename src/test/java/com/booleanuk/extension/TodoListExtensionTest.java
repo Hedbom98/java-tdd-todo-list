@@ -60,4 +60,12 @@ public class TodoListExtensionTest {
 
         Assertions.assertEquals("ID is not in todo list", todoList.updateStatusByID(nonExistingID, true));
     }
+
+    @Test
+    public void enteringExistingIDWhenUpdatingStatus(){
+        TodoListExtension todoList = new TodoListExtension(items);
+        Integer nonExistingID = 3;
+
+        Assertions.assertEquals("Task with ID 3 has a new status: completed", todoList.updateStatusByID(nonExistingID, true));
+    }
 }
