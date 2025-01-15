@@ -23,6 +23,6 @@ public class TodoListExtensionTest {
         TodoListExtension todoList = new TodoListExtension(items);
         Integer nonExistingID = 4;
 
-        Assertions.assertFalse(todoList.getTaskByID(nonExistingID));
+        Assertions.assertEquals("ID is not in todo list", todoList.getTaskByID(nonExistingID));
     }
 }
