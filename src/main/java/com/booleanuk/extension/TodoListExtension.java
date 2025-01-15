@@ -11,4 +11,7 @@ public class TodoListExtension {
         this.tasks = tasks;
     }
 
+    public String getTaskByID(Integer id){
+        return "ID is not in todo list";
+    }
 }
