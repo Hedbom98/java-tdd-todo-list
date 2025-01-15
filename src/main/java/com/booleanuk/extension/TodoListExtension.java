@@ -33,4 +33,8 @@ public class TodoListExtension {
         }
         return "ID is not in todo list";
     }
+
+    public String updateStatusByID(Integer id, Boolean status){
+        return "ID is not in todo list";
+    }
 }
