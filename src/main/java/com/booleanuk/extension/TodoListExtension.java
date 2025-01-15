@@ -35,6 +35,15 @@ public class TodoListExtension {
     }
 
     public String updateStatusByID(Integer id, Boolean status){
+        for(TodoItem item : tasks){
+            if(item.getTodoID().equals(id)){
+                if(status){
+                    return "Task with ID " + id + " has a new status: completed";
+                }else {
+                    return "Task with ID " + id + " has a new status: incomplete";
+                }
+            }
+        }
         return "ID is not in todo list";
     }
 }
