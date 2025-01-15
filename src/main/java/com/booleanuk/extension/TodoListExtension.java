@@ -12,6 +12,15 @@ public class TodoListExtension {
     }
 
     public String getTaskByID(Integer id){
+        for(TodoItem item : tasks){
+            if(item.getTodoID().equals(id)){
+                if(item.getCompleted()){
+                    return item.getName() + ", completed";
+                } else {
+                    return item.getName() + ", not completed";
+                }
+            }
+        }
         return "ID is not in todo list";
     }
 }
