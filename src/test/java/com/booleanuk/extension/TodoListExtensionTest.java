@@ -18,6 +18,7 @@ public class TodoListExtensionTest {
         add(todoItem3);
     }};
 
+    // EXTENSION 1
     @Test
     public void enteringNonExistingID(){
         TodoListExtension todoList = new TodoListExtension(items);
@@ -32,5 +33,14 @@ public class TodoListExtensionTest {
         Integer nonExistingID = 3;
 
         Assertions.assertEquals("Write CV, not completed", todoList.getTaskByID(nonExistingID));
+    }
+
+    // EXTENSION 2
+    @Test
+    public void enteringNonExistingIDWhenUpdating(){
+        TodoListExtension todoList = new TodoListExtension(items);
+        Integer nonExistingID = 4;
+
+        Assertions.assertEquals("ID is not in todo list", todoList.updateNameByID(nonExistingID, "Do homework"));
     }
 }
