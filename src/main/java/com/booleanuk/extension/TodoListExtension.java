@@ -25,6 +25,12 @@ public class TodoListExtension {
     }
 
     public String updateNameByID(Integer id, String newName){
+        for(TodoItem item : tasks){
+            if(item.getTodoID().equals(id)){
+                item.setName(newName);
+                return "Task with ID " + id + " has a new name: " + newName;
+            }
+        }
         return "ID is not in todo list";
     }
 }
