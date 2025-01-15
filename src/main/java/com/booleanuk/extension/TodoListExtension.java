@@ -23,4 +23,8 @@ public class TodoListExtension {
         }
         return "ID is not in todo list";
     }
+
+    public String updateNameByID(Integer id, String newName){
+        return "ID is not in todo list";
+    }
 }
