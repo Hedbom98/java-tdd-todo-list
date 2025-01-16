@@ -3,18 +3,22 @@ package com.booleanuk.extension;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TodoListExtensionTest {
     private ArrayList<TodoItem> items = new ArrayList<>(){{
-        TodoItem todoItem1 = new TodoItem(1, "Clean room", true);
+        LocalDateTime dateTime1 = LocalDateTime.of(2024, 10, 25, 8, 50, 11);
+        TodoItem todoItem1 = new TodoItem(1, "Clean room", true, dateTime1);
         add(todoItem1);
 
-        TodoItem todoItem2 = new TodoItem(2, "Buy groceries", false);
+        LocalDateTime dateTime2 = LocalDateTime.of(2024, 10, 26, 10, 22, 18);
+        TodoItem todoItem2 = new TodoItem(2, "Buy groceries", false, dateTime2);
         add(todoItem2);
 
-        TodoItem todoItem3 = new TodoItem(3, "Write CV", false);
+        LocalDateTime dateTime3 = LocalDateTime.of(2024, 10, 30, 17, 30, 44);
+        TodoItem todoItem3 = new TodoItem(3, "Write CV", false, dateTime3);
         add(todoItem3);
     }};
 
@@ -76,5 +80,18 @@ public class TodoListExtensionTest {
         TodoListExtension todoList = new TodoListExtension(emptyList);
 
         Assertions.assertEquals("There are no tasks in the list!", todoList.showDateTimeForEachTask());
+    }
+
+    @Test
+    public void thereExistsTasksInTheList(){
+        TodoListExtension todoList = new TodoListExtension(items);
+        String correctString =
+                                "Task with id: 1, Clean room, was created: 2024-10-25T08:50:11\n" +
+                                "Task with id: 2, Buy groceries, was created: 2024-10-26T10:22:18\n" +
+                                "Task with id: 3, Write CV, was created: 2024-10-30T17:30:44\n";
+
+
+
+        Assertions.assertEquals(correctString, todoList.showDateTimeForEachTask());
     }
 }

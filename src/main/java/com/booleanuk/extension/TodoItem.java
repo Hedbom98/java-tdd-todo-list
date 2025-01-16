@@ -9,11 +9,11 @@ public class TodoItem {
     private final Integer todoID;
     private LocalDateTime dateTime;
 
-    public TodoItem(Integer todoID, String name, Boolean completed){
+    public TodoItem(Integer todoID, String name, Boolean completed, LocalDateTime dateTime){
         this.todoID = todoID;
         this.name = name;
         this.completed = false;
-        this.dateTime = LocalDateTime.now();
+        this.dateTime = dateTime;
     }
 
     public LocalDateTime getDateTime() {

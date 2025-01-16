@@ -51,7 +51,7 @@ public class TodoListExtension {
         String tasks = "";
         if(!this.tasks.isEmpty()){
             for(TodoItem item : this.tasks){
-                tasks += "Task with id: " + item.getTodoID() + ", " + item.getName() + " was created: " + item.getDateTime().toString() + "\n";
+                tasks += "Task with id: " + item.getTodoID() + ", " + item.getName() + ", was created: " + item.getDateTime().toString() + "\n";
             }
             return tasks;
         }
